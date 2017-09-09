@@ -1,0 +1,24 @@
+{
+    "name": "SirCumz/laravel-mixable",
+    "description": "A Laravel 5.4 package for mixing packages.",    
+    "keywords": ["laravel", "mixable"],
+    "homepage": "https://github.com/SirCumz/laravel-mixable",
+    "license": "MIT",  
+    "config": {
+        "preferred-install": "source"
+    },   
+    "authors": [
+        {
+            "name": "Tjip Kloosterman",
+            "email": "jefferso_83@hotmail.com"
+        }
+    ],         
+    "require": {
+        "php": "^5.4 || ^7.0"
+    },    
+    "autoload": {      
+        "psr-4" : {
+            "SirCumz\\LaravelMixable\\" : "src"
+        }
+    }  
+}
