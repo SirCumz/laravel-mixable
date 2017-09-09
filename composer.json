@@ -1,8 +1,8 @@
 {
-    "name": "SirCumz/laravel-mixable",
+    "name": "sircumz/laravel-mixable",
     "description": "A Laravel 5.4 package for mixing packages.",    
     "keywords": ["laravel", "mixable"],
-    "homepage": "https://github.com/SirCumz/laravel-mixable",
+    "homepage": "https://github.com/sircumz/laravel-mixable",
     "license": "MIT",  
     "config": {
         "preferred-install": "source"
