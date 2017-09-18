@@ -1,8 +1,8 @@
-laravel-modular!
+laravel-mixable!
 ===================
-[![Latest Stable Version](https://poser.pugx.org/SirCumz/laravel-mixable/v/stable)](https://packagist.org/packages/SirCumz/laravel-mixable) [![Total Downloads](https://poser.pugx.org/SirCumz/laravel-mixable/downloads)](https://packagist.org/packages/SirCumz/laravel-mixable) [![Latest Unstable Version](https://poser.pugx.org/SirCumz/laravel-mixable/v/unstable)](https://packagist.org/packages/SirCumz/laravel-mixable) [![License](https://poser.pugx.org/SirCumz/laravel-mixable/license)](https://packagist.org/packages/SirCumz/laravel-mixable)
+[![Latest Stable Version](https://poser.pugx.org/sircumz/laravel-mixable/v/stable)](https://packagist.org/packages/sircumz/laravel-mixable) [![Total Downloads](https://poser.pugx.org/sircumz/laravel-mixable/downloads)](https://packagist.org/packages/sircumz/laravel-mixable) [![Latest Unstable Version](https://poser.pugx.org/sircumz/laravel-mixable/v/unstable)](https://packagist.org/packages/sircumz/laravel-mixable) [![License](https://poser.pugx.org/sircumz/laravel-mixable/license)](https://packagist.org/packages/sircumz/laravel-mixable)
 
-A Laravel 5.4+ package for mixing laravel packages.
+A Laravel 5.4+ package for mixing Laravel packages.
 
 ----------
 
@@ -17,10 +17,27 @@ Add the service provider to config/app.php:
     SirCumz\LaravelMixable\LaravelMixableServiceProvider::class
 
 
-Compiling Module Assets with laravel Mix
+Compiling Assets with Laravel Mix
 -------
-Add the following code to the top of "webpack.mix.js" if you want to enable asset compiling for modules.
+Add the following code to the top of "webpack.mix.js" if you want to enable asset compiling with Mixable.
 
-    
     const mix = require('./vendor/sircumz/laravel-mixable/mixable.js');
 
+ instruct Mixable what to mix. 
+
+    public function boot() {
+        $this->app['mixable']->mix( function($mix) {
+
+            /**
+            *  You can use almost every function that Laravel Mix has to offer in their API.
+            *  @docs: https://laravel.com/docs/5.5/mix
+            */
+            $mix->sass( __DIR__ . '/assets/css/style.css', 'public/mypackage/css/style.css' );
+        } );
+    }
+
+ Run the Laravel Mix commands in your terminal as you normally would do.
+
+    npm run watch
+
+Enjoy!

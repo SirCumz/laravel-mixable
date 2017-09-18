@@ -23,8 +23,17 @@ class LaravelMixableServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->alias('mixable', Mixable::class);
+
+        $this->app->singleton('mixable', function ($app) {
+
+            $mixable = new Mixable($app['files']);
+
+            return $mixable;
+        });
+
         $this->commands([
-            Console\MixableCommand::class
+            Console\ManifestCommand::class
         ]);
     }
 }

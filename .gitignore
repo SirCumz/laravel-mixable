@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+# Mixable manifest
+mixable-manifest.js
+
 # Folder config file
 Desktop.ini
 
