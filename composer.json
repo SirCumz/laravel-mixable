@@ -4,9 +4,6 @@
     "keywords": ["laravel", "mixable"],
     "homepage": "https://github.com/sircumz/laravel-mixable",
     "license": "MIT",  
-    "config": {
-        "preferred-install": "source"
-    },   
     "authors": [
         {
             "name": "Tjip Kloosterman",
@@ -14,7 +11,7 @@
         }
     ],         
     "require": {
-        "php": "^5.4 || ^7.0"
+        "php": "^7.0"
     },    
     "autoload": {      
         "psr-4" : {
